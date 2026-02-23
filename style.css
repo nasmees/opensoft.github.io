@@ -1,0 +1,474 @@
+/* IBM Carbon Design System Inspired Styles */
+
+:root {
+    --ibm-blue: #0f62fe;
+    --background-white: #ffffff;
+    --background-gray: #f4f4f4;
+    --text-primary: #161616;
+    --text-secondary: #525252;
+    --border-subtle: #e0e0e0;
+    /* Updated to include Thai font */
+    --font-family: 'IBM Plex Sans Thai', 'IBM Plex Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-primary);
+    background-color: var(--background-white);
+    line-height: 1.6; /* Adjusted for Thai language readability */
+}
+
+/* --- General Components --- */
+
+a {
+    color: var(--ibm-blue);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+section {
+    padding: 6rem 0;
+}
+
+section.bg-gray {
+    background-color: var(--background-gray);
+}
+
+h2.section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+p.section-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    max-width: 700px; /* Increased width for Thai verbosity */
+    margin-bottom: 4rem;
+}
+
+.btn {
+    display: inline-block;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 1rem 2rem;
+    border-radius: 0;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--ibm-blue);
+    color: var(--background-white);
+}
+
+.btn-primary:hover {
+    background-color: #0043ce;
+    text-decoration: none;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--ibm-blue);
+    border: 1px solid var(--ibm-blue);
+}
+
+.btn-secondary:hover {
+    background-color: var(--ibm-blue);
+    color: var(--background-white);
+    text-decoration: none;
+}
+
+/* --- Header --- */
+header {
+    background-color: var(--background-white);
+    border-bottom: 1px solid var(--border-subtle);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-decoration: none;
+    letter-spacing: -0.05em; /* Gives a more compact, logo-like feel */
+}
+
+.logo a:hover {
+    color: var(--ibm-blue);
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+nav ul a {
+    color: var(--text-primary);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+nav ul a:hover {
+    color: var(--ibm-blue);
+}
+
+/* --- Hero Section --- */
+.hero {
+    padding: 8rem 0;
+    text-align: left;
+}
+
+.hero h1 {
+    font-size: 3.2rem; /* Slightly adjusted for bilingual text */
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin-bottom: 2.5rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+/* --- Services Section --- */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.service-card-ibm {
+    background-color: var(--background-white);
+    padding: 2.5rem 2rem;
+    border-top: 4px solid var(--ibm-blue);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card-ibm:hover {
+    background-color: #f9f9f9;
+    transform: translateY(-5px);
+}
+
+.service-card-ibm .icon {
+    font-size: 2.5rem;
+    color: var(--ibm-blue);
+    margin-bottom: 1.5rem;
+}
+
+.service-card-ibm h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.service-card-ibm p {
+    color: var(--text-secondary);
+    flex-grow: 1;
+}
+
+/* --- Process Section --- */
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.process-card {
+    background-color: var(--background-white);
+    padding: 2.5rem 2rem;
+    text-align: left;
+    border: 1px solid var(--border-subtle);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.process-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.process-card .icon {
+    font-size: 2.5rem;
+    color: var(--ibm-blue);
+    margin-bottom: 1.5rem;
+}
+
+.process-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.process-card p {
+    color: var(--text-secondary);
+}
+
+/* --- Expertise Section --- */
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.expertise-card {
+    background-color: var(--background-white); /* Changed to white */
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    border: 1px solid var(--border-subtle);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.expertise-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.expertise-card .icon {
+    font-size: 2.5rem;
+    color: var(--ibm-blue);
+    margin-bottom: 1.5rem;
+}
+
+.expertise-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.expertise-card p {
+    color: var(--text-secondary);
+    flex-grow: 1;
+}
+
+/* --- Contact Section --- */
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 6rem;
+    align-items: flex-start;
+}
+
+.contact-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-info p {
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+.contact-info i {
+    margin-right: 15px;
+    color: var(--ibm-blue);
+    width: 25px;
+}
+
+#contact-form .input-group {
+    margin-bottom: 1.5rem;
+}
+
+#contact-form label {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    background-color: var(--background-gray);
+    border: 2px solid transparent;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+#contact-form input:focus, #contact-form textarea:focus {
+    outline: none;
+    border-color: var(--ibm-blue);
+    background-color: var(--background-white);
+}
+
+/* --- About Page --- */
+#about-hero {
+    padding: 6rem 0;
+}
+
+.about-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 5rem;
+    align-items: flex-start;
+}
+
+.about-main-content h2, .about-main-content h3 {
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-main-content p {
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+.about-sidebar {
+    background-color: var(--background-gray);
+    padding: 2rem;
+}
+
+.about-sidebar h3 {
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.about-sidebar ul {
+    list-style: none;
+}
+
+.about-sidebar li {
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+.about-sidebar li strong {
+    color: var(--text-primary);
+    display: block;
+}
+
+
+/* --- Footer --- */
+footer {
+    background-color: var(--text-primary);
+    color: var(--background-gray);
+    padding: 4rem 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+}
+
+.footer-col h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: var(--background-white);
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col li {
+    margin-bottom: 1rem;
+}
+
+.footer-col a {
+    color: var(--background-gray);
+    text-decoration: none;
+}
+
+.footer-col a:hover {
+    color: var(--ibm-blue);
+    text-decoration: none;
+}
+
+.footer-socials a {
+    margin-right: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.footer-bottom {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--text-secondary);
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+
+/* --- Responsive --- */
+@media (max-width: 1200px) {
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .contact-wrapper { grid-template-columns: 1fr; gap: 4rem; }
+    .about-wrapper { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    header .container nav { display: none; /* Mobile menu would be implemented here */}
+    .hero { text-align: center; }
+    .hero-buttons { justify-content: center; }
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .services-grid { grid-template-columns: 1fr; }
+    .expertise-grid { grid-template-columns: 1fr;}
+}
