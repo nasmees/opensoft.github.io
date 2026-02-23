@@ -89,9 +89,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Sarabun:wght@400;500;600&family=Krub:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=1.6">
+    <link rel="stylesheet" href="style.css?v=1.7">
 </head>
 <body>
+    <!-- Skip to main content for screen readers -->
+    <a href="#main" class="skip-to-main">ข้ามไปเนื้อหลัก</a>
 
     <header>
         <div class="container">
@@ -114,10 +116,10 @@
         </div>
     </header>
 
-    <main>
-        <section id="home" class="hero" role="banner">
+    <main id="main" role="main">
+        <section id="home" class="hero" role="banner" aria-labelledby="hero-heading">
             <div class="container">
-                <h1>ขับเคลื่อนธุรกิจสู่ยุคดิจิทัลด้วย IT Solution ระดับมืออาชีพ</h1>
+                <h1 id="hero-heading">ขับเคลื่อนธุรกิจสู่ยุคดิจิทัลด้วย IT Solution ระดับมืออาชีพ</h1>
                 <p>เราให้บริการไอทีโซลูชั่นครบวงจร ตั้งแต่ฮาร์ดแวร์ ซอฟต์แวร์ ไปจนถึง IT Outsource เพื่อเสริมศักยภาพให้ธุรกิจของคุณเติบโตอย่างยั่งยืน</p>
                 <div class="hero-buttons" role="group" aria-label="หน้าหลักการกระทำ">
                     <a href="#contact" class="btn btn-primary" aria-label="รับคำปรึกษาฟรีจาก OpenSoft">รับคำปรึกษาฟรี</a>
@@ -131,26 +133,26 @@
                 <h2 id="services-heading" class="section-title">บริการหลักของเรา</h2>
                 <p class="section-subtitle">โซลูชั่นไอทีครบวงจรที่ออกแบบมาเพื่อตอบสนองทุกความต้องการทางเทคโนโลยีและขับเคลื่อนการเติบโตของธุรกิจคุณ</p>
                 <div class="services-grid" role="list" aria-label="บริการของเรา">
-                    <div class="service-card-ibm" role="listitem">
+                    <article class="service-card-ibm" role="listitem" aria-labelledby="service-1-title">
                         <div class="icon" aria-hidden="true"><i class="fas fa-desktop"></i></div>
-                        <h3>ฮาร์ดแวร์และระบบเครือข่าย</h3>
+                        <h3 id="service-1-title">ฮาร์ดแวร์และระบบเครือข่าย</h3>
                         <p>จัดจำหน่าย ติดตั้ง และดูแลรักษาคอมพิวเตอร์คุณภาพสูง, อุปกรณ์ต่อพ่วง, และวางโครงสร้างพื้นฐานระบบเครือข่ายที่แข็งแกร่ง</p>
-                    </div>
-                    <div class="service-card-ibm">
-                        <div class="icon"><i class="fas fa-cogs"></i></div>
-                        <h3>ซอฟต์แวร์และแอปพลิเคชัน</h3>
+                    </article>
+                    <article class="service-card-ibm" role="listitem" aria-labelledby="service-2-title">
+                        <div class="icon" aria-hidden="true"><i class="fas fa-cogs"></i></div>
+                        <h3 id="service-2-title">ซอฟต์แวร์และแอปพลิเคชัน</h3>
                         <p>จำหน่ายซอฟต์แวร์ลิขสิทธิ์, ติดตั้งระบบปฏิบัติการ (OS) พร้อมให้คำปรึกษาด้านแอปพลิเคชันเพื่อเพิ่มประสิทธิภาพการทำงาน</p>
-                    </div>
-                    <div class="service-card-ibm">
-                        <div class="icon"><i class="fas fa-server"></i></div>
-                        <h3>เว็บโฮสติ้งและพัฒนาเว็บไซต์</h3>
+                    </article>
+                    <article class="service-card-ibm" role="listitem" aria-labelledby="service-3-title">
+                        <div class="icon" aria-hidden="true"><i class="fas fa-server"></i></div>
+                        <h3 id="service-3-title">เว็บโฮสติ้งและพัฒนาเว็บไซต์</h3>
                         <p>บริการโฮสติ้งที่ปลอดภัยและยืดหยุ่น พร้อมบริการออกแบบและพัฒนาเว็บไซต์เพื่อสร้างตัวตนที่แข็งแกร่งบนโลกออนไลน์</p>
-                    </div>
-                    <div class="service-card-ibm">
-                        <div class="icon"><i class="fas fa-users-cog"></i></div>
-                        <h3>บริการดูแลระบบไอที (IT Outsource)</h3>
+                    </article>
+                    <article class="service-card-ibm" role="listitem" aria-labelledby="service-4-title">
+                        <div class="icon" aria-hidden="true"><i class="fas fa-users-cog"></i></div>
+                        <h3 id="service-4-title">บริการดูแลระบบไอที (IT Outsource)</h3>
                         <p>บริหารจัดการไอทีครบวงจร ตั้งแต่ Help Desk Support ไปจนถึงการดูแลความปลอดภัยและโครงสร้างพื้นฐานทั้งหมด</p>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -215,26 +217,27 @@
                         <p><i class="fas fa-envelope"></i> open.soft@outlook.com</p>
                         <p>พูดคุยกับเราเพื่อค้นหาว่าความเชี่ยวชาญของเราจะสามารถตอบสนองความต้องการเฉพาะทางของคุณในโลกดิจิทัลที่เปลี่ยนแปลงอย่างรวดเร็วได้อย่างไร</p>
                     </div>
-                    <form id="contact-form" novalidate>
+                    <form id="contact-form" novalidate aria-labelledby="contact-form-title">
+                        <h2 id="contact-form-title" class="sr-only">ฟอร์มติดต่อเรา</h2>
                         <div class="input-group">
-                            <label for="name">ชื่อ-นามสกุล *</label>
-                            <input type="text" id="name" name="name" required aria-required="true">
-                            <span class="error-message" id="name-error"></span>
+                            <label for="name">ชื่อ-นามสกุล <span aria-label="จำเป็น">*</span></label>
+                            <input type="text" id="name" name="name" required aria-required="true" aria-describedby="name-error">
+                            <span class="error-message" id="name-error" role="alert"></span>
                         </div>
                         <div class="input-group">
-                            <label for="email">อีเมล *</label>
-                            <input type="email" id="email" name="email" required aria-required="true">
-                            <span class="error-message" id="email-error"></span>
+                            <label for="email">อีเมล <span aria-label="จำเป็น">*</span></label>
+                            <input type="email" id="email" name="email" required aria-required="true" aria-describedby="email-error">
+                            <span class="error-message" id="email-error" role="alert"></span>
                         </div>
                         <div class="input-group">
-                            <label for="message">ข้อความ *</label>
-                            <textarea id="message" name="message" rows="5" placeholder="เราจะช่วยคุณได้อย่างไร?" required aria-required="true"></textarea>
-                            <span class="error-message" id="message-error"></span>
+                            <label for="message">ข้อความ <span aria-label="จำเป็น">*</span></label>
+                            <textarea id="message" name="message" rows="5" placeholder="เราจะช่วยคุณได้อย่างไร?" required aria-required="true" aria-describedby="message-error"></textarea>
+                            <span class="error-message" id="message-error" role="alert"></span>
                         </div>
-                        <div class="form-status" id="form-status"></div>
-                        <button type="submit" class="btn btn-primary" id="submit-btn">
+                        <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+                        <button type="submit" class="btn btn-primary" id="submit-btn" aria-label="ส่งข้อความติดต่อ">
                             <span class="btn-text">ส่งข้อความ</span>
-                            <span class="btn-loading" style="display: none;">กำลังส่ง...</span>
+                            <span class="btn-loading" style="display: none;" aria-hidden="true">กำลังส่ง...</span>
                         </button>
                     </form>
                 </div>
@@ -880,6 +883,180 @@
         
         // Initialize performance optimizations
         initializePerformanceOptimizations();
+        
+        // Accessibility Features
+        
+        // Keyboard navigation detection
+        function detectKeyboardNavigation() {
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Tab') {
+                    document.body.classList.add('keyboard-nav');
+                }
+            });
+            
+            document.addEventListener('mousedown', function() {
+                document.body.classList.remove('keyboard-nav');
+            });
+        }
+        
+        // ARIA live region announcements
+        function announceToScreenReader(message, priority = 'polite') {
+            const announcement = document.createElement('div');
+            announcement.setAttribute('aria-live', priority);
+            announcement.setAttribute('aria-atomic', 'true');
+            announcement.className = 'sr-only';
+            announcement.textContent = message;
+            document.body.appendChild(announcement);
+            
+            setTimeout(() => {
+                if (announcement.parentNode) {
+                    announcement.parentNode.removeChild(announcement);
+                }
+            }, 1000);
+        }
+        
+        // Enhanced focus management for mobile menu
+        function enhanceMobileMenuAccessibility() {
+            const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+            const mainNav = document.getElementById('main-nav');
+            const navLinks = mainNav.querySelectorAll('a');
+            
+            mobileMenuToggle.setAttribute('aria-expanded', 'false');
+            mobileMenuToggle.setAttribute('aria-controls', 'main-nav');
+            mobileMenuToggle.setAttribute('aria-label', 'เปิดเมนูนำทาง');
+            
+            mobileMenuToggle.addEventListener('click', function() {
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', !isExpanded);
+                this.setAttribute('aria-label', isExpanded ? 'เปิดเมนูนำทาง' : 'ปิดเมนูนำทาง');
+                
+                // Focus management
+                if (!isExpanded) {
+                    setTimeout(() => {
+                        navLinks[0].focus();
+                    }, 100);
+                }
+            });
+            
+            // Trap focus within mobile menu
+            function trapFocus(element) {
+                const focusableElements = element.querySelectorAll(
+                    'a, button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
+                );
+                const firstFocusableElement = focusableElements[0];
+                const lastFocusableElement = focusableElements[focusableElements.length - 1];
+                
+                element.addEventListener('keydown', function(e) {
+                    if (e.key === 'Tab') {
+                        if (e.shiftKey) {
+                            if (document.activeElement === firstFocusableElement) {
+                                lastFocusableElement.focus();
+                                e.preventDefault();
+                            }
+                        } else {
+                            if (document.activeElement === lastFocusableElement) {
+                                firstFocusableElement.focus();
+                                e.preventDefault();
+                            }
+                        }
+                    }
+                    
+                    if (e.key === 'Escape') {
+                        mobileMenuToggle.click();
+                        mobileMenuToggle.focus();
+                    }
+                });
+            }
+            
+            trapFocus(mainNav);
+        }
+        
+        // Form accessibility enhancements
+        function enhanceFormAccessibility() {
+            const form = document.getElementById('contact-form');
+            if (!form) return;
+            
+            // Add fieldset and legend for better form structure
+            const fieldsets = form.querySelectorAll('.input-group');
+            fieldsets.forEach((fieldset, index) => {
+                const input = fieldset.querySelector('input, textarea');
+                const label = fieldset.querySelector('label');
+                const error = fieldset.querySelector('.error-message');
+                
+                if (input && label) {
+                    // Ensure proper label association
+                    if (!input.getAttribute('aria-describedby') && error) {
+                        input.setAttribute('aria-describedby', error.id);
+                    }
+                    
+                    // Add validation feedback
+                    input.addEventListener('invalid', function() {
+                        this.setAttribute('aria-invalid', 'true');
+                        announceToScreenReader(`ข้อผิดพลาดในช่อง ${label.textContent}`);
+                    });
+                    
+                    input.addEventListener('input', function() {
+                        if (this.getAttribute('aria-invalid') === 'true') {
+                            this.removeAttribute('aria-invalid');
+                        }
+                    });
+                }
+            });
+            
+            // Form submission feedback
+            form.addEventListener('submit', function() {
+                announceToScreenReader('กำลังส่งข้อมูล');
+            });
+        }
+        
+        // Skip link functionality
+        function enhanceSkipLink() {
+            const skipLink = document.querySelector('.skip-to-main');
+            if (skipLink) {
+                skipLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.focus();
+                        target.scrollIntoView();
+                    }
+                });
+            }
+        }
+        
+        // Color contrast checker (development only)
+        function checkColorContrast() {
+            if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+                const elements = document.querySelectorAll('h1, h2, h3, p, .btn');
+                elements.forEach(element => {
+                    const styles = window.getComputedStyle(element);
+                    const color = styles.color;
+                    const backgroundColor = styles.backgroundColor;
+                    
+                    // Simple contrast check (would need proper implementation)
+                    if (color === backgroundColor) {
+                        console.warn('Low contrast detected:', element);
+                    }
+                });
+            }
+        }
+        
+        // Initialize accessibility features
+        function initializeAccessibility() {
+            detectKeyboardNavigation();
+            enhanceMobileMenuAccessibility();
+            enhanceFormAccessibility();
+            enhanceSkipLink();
+            checkColorContrast();
+            
+            // Announce page load to screen readers
+            setTimeout(() => {
+                announceToScreenReader('หน้าเว็บ OpenSoft IT Solution โหลดเสร็จสมบูรณ์');
+            }, 1000);
+        }
+        
+        // Initialize accessibility
+        initializeAccessibility();
         
     </script>
 
