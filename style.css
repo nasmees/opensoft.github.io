@@ -391,6 +391,85 @@ body.nav-open {
     background-color: var(--background-white);
 }
 
+/* Form Error States */
+#contact-form .input-group.error input,
+#contact-form .input-group.error textarea {
+    border-color: #da1e28;
+    background-color: #fff1f1;
+}
+
+#contact-form .error-message {
+    display: block;
+    color: #da1e28;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+#contact-form .form-status {
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    display: none;
+}
+
+#contact-form .form-status.success {
+    background-color: #e8f5e8;
+    color: #1e7e1e;
+    border: 1px solid #1e7e1e;
+}
+
+#contact-form .form-status.error {
+    background-color: #fff1f1;
+    color: #da1e28;
+    border: 1px solid #da1e28;
+}
+
+#contact-form .form-status.info {
+    background-color: #e5f6ff;
+    color: #0f62fe;
+    border: 1px solid #0f62fe;
+}
+
+/* Button Loading State */
+#submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#submit-btn .btn-loading {
+    display: none;
+}
+
+/* Form Animation */
+#contact-form .input-group {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+#contact-form .input-group.error {
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* Focus Animation */
+#contact-form input,
+#contact-form textarea {
+    transition: all 0.2s ease;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(15, 98, 254, 0.15);
+}
+
 /* --- About Page --- */
 #about-hero {
     padding: 6rem 0;
@@ -491,6 +570,685 @@ footer {
     color: var(--text-secondary);
 }
 
+
+/* --- Animations and Transitions --- */
+
+/* Smooth Scroll Behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slide In Left Animation */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Slide In Right Animation */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Scale In Animation */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Hero Section Animations */
+.hero h1 {
+    animation: fadeIn 1s ease-out;
+}
+
+.hero p {
+    animation: fadeIn 1s ease-out 0.3s both;
+}
+
+.hero-buttons {
+    animation: fadeIn 1s ease-out 0.6s both;
+}
+
+/* Section Animations */
+section {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-title {
+    animation: fadeIn 0.8s ease-out;
+}
+
+.section-subtitle {
+    animation: fadeIn 0.8s ease-out 0.2s both;
+}
+
+/* Service Cards Animation */
+.service-card-ibm {
+    animation: fadeIn 0.8s ease-out;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card-ibm:nth-child(1) { animation-delay: 0.1s; }
+.service-card-ibm:nth-child(2) { animation-delay: 0.2s; }
+.service-card-ibm:nth-child(3) { animation-delay: 0.3s; }
+.service-card-ibm:nth-child(4) { animation-delay: 0.4s; }
+
+.service-card-ibm:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(15, 98, 254, 0.15);
+}
+
+.service-card-ibm .icon {
+    transition: all 0.3s ease;
+}
+
+.service-card-ibm:hover .icon {
+    transform: scale(1.1) rotate(5deg);
+    color: #0043ce;
+}
+
+/* Process Cards Animation */
+.process-card {
+    animation: slideInUp 0.8s ease-out;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.process-card:nth-child(1) { animation-delay: 0.1s; }
+.process-card:nth-child(2) { animation-delay: 0.2s; }
+.process-card:nth-child(3) { animation-delay: 0.3s; }
+.process-card:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.process-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 32px rgba(15, 98, 254, 0.2);
+}
+
+.process-card .icon {
+    transition: all 0.3s ease;
+}
+
+.process-card:hover .icon {
+    transform: scale(1.15);
+    color: #0043ce;
+}
+
+/* Expertise Cards Animation */
+.expertise-card {
+    animation: fadeIn 0.8s ease-out;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.expertise-card:nth-child(1) { animation-delay: 0.1s; }
+.expertise-card:nth-child(2) { animation-delay: 0.2s; }
+
+.expertise-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(15, 98, 254, 0.15);
+}
+
+.expertise-card .icon {
+    transition: all 0.3s ease;
+}
+
+.expertise-card:hover .icon {
+    transform: scale(1.1);
+    color: #0043ce;
+}
+
+/* Button Animations */
+.btn {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(15, 98, 254, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: #0043ce;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(15, 98, 254, 0.3);
+}
+
+.btn-secondary:hover {
+    background-color: var(--ibm-blue);
+    color: var(--background-white);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(15, 98, 254, 0.3);
+}
+
+/* Navigation Animations */
+nav ul a {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav ul a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--ibm-blue);
+    transition: width 0.3s ease;
+}
+
+nav ul a:hover::after {
+    width: 100%;
+}
+
+nav ul a:hover {
+    color: var(--ibm-blue);
+    transform: translateY(-1px);
+}
+
+/* Logo Animation */
+.logo a {
+    transition: all 0.3s ease;
+}
+
+.logo a:hover {
+    color: var(--ibm-blue);
+    transform: scale(1.05);
+}
+
+/* Footer Links Animation */
+.footer-col a {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.footer-col a:hover {
+    color: var(--ibm-blue);
+    transform: translateX(5px);
+}
+
+/* Social Media Icons Animation */
+.footer-socials a {
+    transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+    transform: translateY(-3px) scale(1.1);
+    color: var(--ibm-blue);
+}
+
+/* Scroll Reveal Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Loading Animation */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.loading {
+    animation: pulse 1.5s infinite;
+}
+
+/* --- Loading States and Micro-interactions --- */
+
+/* Page Loading Animation */
+.page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.page-loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.page-loader-content {
+    text-align: center;
+}
+
+.page-loader-logo {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--ibm-blue);
+    margin-bottom: 1rem;
+    animation: pulse 1.5s infinite;
+}
+
+.page-loader-text {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+/* Skeleton Loading */
+.skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.skeleton-text {
+    height: 1.2rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+}
+
+.skeleton-title {
+    height: 2rem;
+    width: 60%;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+.skeleton-card {
+    height: 200px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Progress Indicators */
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background-color: var(--background-gray);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: var(--ibm-blue);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+    animation: progressPulse 2s infinite;
+}
+
+@keyframes progressPulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* Hover Effects */
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.hover-glow {
+    transition: all 0.3s ease;
+}
+
+.hover-glow:hover {
+    box-shadow: 0 0 20px rgba(15, 98, 254, 0.3);
+}
+
+/* Button Loading State */
+.btn.loading {
+    position: relative;
+    color: transparent !important;
+    pointer-events: none;
+}
+
+.btn.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    margin: -8px 0 0 -8px;
+    border: 2px solid transparent;
+    border-top-color: currentColor;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Form Micro-interactions */
+.input-group {
+    position: relative;
+}
+
+.input-group.focused label {
+    color: var(--ibm-blue);
+    transform: translateY(-2px);
+}
+
+.input-group.filled input,
+.input-group.filled textarea {
+    background-color: #f8f9fa;
+}
+
+/* Success/Error States */
+.success-checkmark {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    stroke-width: 2;
+    stroke: #1e7e1e;
+    stroke-miterlimit: 10;
+    box-shadow: inset 0px 0px 0px #1e7e1e;
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+}
+
+.success-checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #1e7e1e;
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.success-checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes scale {
+    0%, 100% {
+        transform: none;
+    }
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 30px #1e7e1e;
+    }
+}
+
+/* Notification Toast */
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--background-white);
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transform: translateX(400px);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.toast.show {
+    transform: translateX(0);
+}
+
+.toast.success {
+    border-left: 4px solid #1e7e1e;
+}
+
+.toast.error {
+    border-left: 4px solid #da1e28;
+}
+
+.toast.info {
+    border-left: 4px solid var(--ibm-blue);
+}
+
+.toast-icon {
+    font-size: 1.2rem;
+}
+
+.toast.success .toast-icon {
+    color: #1e7e1e;
+}
+
+.toast.error .toast-icon {
+    color: #da1e28;
+}
+
+.toast.info .toast-icon {
+    color: var(--ibm-blue);
+}
+
+/* Card Flip Animation */
+.card-flip {
+    perspective: 1000px;
+}
+
+.card-flip-inner {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card-flip.flipped .card-flip-inner {
+    transform: rotateY(180deg);
+}
+
+.card-flip-front, .card-flip-back {
+    backface-visibility: hidden;
+}
+
+.card-flip-back {
+    transform: rotateY(180deg);
+}
+
+/* Typing Effect */
+.typing-effect {
+    overflow: hidden;
+    border-right: 2px solid var(--ibm-blue);
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--ibm-blue) }
+}
+
+/* --- Performance Optimizations --- */
+
+/* CSS Performance Improvements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GPU Acceleration for animations */
+.gpu-accelerated {
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+/* Optimize images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Optimize font loading - Note: Using Google Fonts with font-display: swap */
+/* Google Fonts automatically handles font-display: swap for better performance */
+
+/* Reduce paint on scroll */
+.service-card-ibm,
+.process-card,
+.expertise-card {
+    contain: layout style paint;
+}
+
+/* Optimize animations */
+.service-card-ibm,
+.process-card,
+.expertise-card {
+    transform: translateZ(0); /* Enable hardware acceleration */
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* Optimize scroll performance */
+html {
+    scroll-behavior: smooth;
+    overflow-anchor: none; /* Disable scroll anchoring for better performance */
+}
+
+/* Lazy loading placeholder */
+.lazy-load {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lazy-load.loaded {
+    opacity: 1;
+}
+
+/* Optimize button rendering */
+.btn {
+    contain: layout style;
+    transform: translateZ(0);
+}
+
+/* Reduce reflows */
+.container {
+    contain: layout;
+}
+
+/* Optimize form inputs */
+input, textarea {
+    contain: layout style;
+}
+
+/* Performance monitoring */
+.performance-indicator {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    z-index: 9999;
+    font-family: monospace;
+}
 
 /* --- Responsive --- */
 
