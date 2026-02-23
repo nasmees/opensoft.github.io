@@ -158,6 +158,43 @@ nav ul a:hover {
     color: var(--ibm-blue);
 }
 
+/* --- Mobile Navigation --- */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    z-index: 1001;
+}
+
+.mobile-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-primary);
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Prevent body scroll when nav is open */
+body.nav-open {
+    overflow: hidden;
+}
+
 /* --- Hero Section --- */
 .hero {
     padding: 8rem 0;
@@ -493,7 +530,55 @@ html[lang="th"] {
 
 @media (max-width: 768px) {
     h1 { font-size: 2.5rem; }
-    header .container nav { display: none; /* Mobile menu would be implemented here */}
+    
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    header .container {
+        position: relative;
+    }
+    
+    #main-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: var(--background-white);
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease;
+        z-index: 1000;
+        padding: 5rem 2rem 2rem;
+        overflow-y: auto;
+    }
+    
+    #main-nav.active {
+        right: 0;
+    }
+    
+    #main-nav ul {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: flex-start;
+    }
+    
+    #main-nav ul a {
+        font-size: 1.1rem;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid var(--border-subtle);
+        width: 100%;
+    }
+    
+    #main-nav ul a.btn {
+        border: 1px solid var(--ibm-blue);
+        text-align: center;
+        margin-top: 1rem;
+        padding: 1rem;
+        border-radius: 0;
+    }
+    
     .hero { text-align: center; }
     .hero-buttons { justify-content: center; }
     .process-grid {
